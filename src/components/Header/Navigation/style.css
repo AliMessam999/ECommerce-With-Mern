@@ -1,0 +1,6 @@
+.categoryPanel button{
+    @apply capitalize ;
+}
+ul.nav li .link button{
+    @apply text-[12px];
+}

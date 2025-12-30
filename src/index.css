@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+/* *{
+    @apply p-0 m-0 box-border;
+} */
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    background: #F2EEED;
+}
+.container {
+    @apply w-[90%] mx-auto;
+}
+.link:hover {
+    @apply text-[#ff5252];
+}
+.MuiBadge-badge {
+    @apply !bg-[#FF5252];
+}
+
+.MuiButtonBase-root:hover .link {
+    @apply text-[#ff5252];
+}
