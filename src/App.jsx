@@ -3,7 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-
+// import HomeSlider from './components/HomeSlider'
 const App = () => {
   return (
     <Router>
@@ -11,6 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      
     </Router>
   )
 }

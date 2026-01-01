@@ -9,6 +9,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-optical-sizing: auto;
     background: #F2EEED;
+    overflow-x: hidden;
 }
 .container {
     @apply w-[90%] mx-auto;
