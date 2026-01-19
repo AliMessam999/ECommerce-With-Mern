@@ -9,12 +9,13 @@ import 'swiper/css/navigation';
 import './style.css';
 
 // import required modules
-import { Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 
 const HomeSlider = () => {
     return (
         <>
-            <div className="homeSlider">
+            <div className="homeSlider select-none">
                 <div className="container">
                     <Swiper
                         pagination={{
@@ -23,7 +24,11 @@ const HomeSlider = () => {
                         spaceBetween={20}
                         slidesPerView={1}
                         navigation={true}
-                        modules={[Navigation]}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        modules={[Navigation, Autoplay]}
                         className="mySwiper"
                     >
                     <SwiperSlide className="rounded-[20px] overflow-hidden">

@@ -1,11 +1,126 @@
 import React from 'react'
 import HomeSlider from '../../components/HomeSlider'
 import HomeCatSlider from '../../components/HomeCatSlider'
+import { LiaShippingFastSolid } from "react-icons/lia";
+import AdsBannerSlider from '../../components/AdsBannerSlider'
+import ProductsSlider from '../../components/ProductsSlider'
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+
+
 const Home = () => {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <div>
       <HomeSlider />
       <HomeCatSlider />
+
+      <section className='bg-white py-8'>
+        <div className="container overflow-hidden">
+          <div className="flex items-center justify-between">
+            <div className="leftSec">
+              <h2 className='text-[22px] font-[600]'>Popular Products</h2>
+              <p className='text-[14px] font-[400]'>Do not miss the current offers until the end of March.</p>
+            </div>
+            <div className="rightSec w-[60%] flex justify-end">
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  variant="scrollable"
+                  scrollButtons="auto"
+                  aria-label="scrollable auto tabs example"
+                >
+                  <Tab label="Fashion" />
+                  <Tab label="Electronics" />
+                  <Tab label="Bags" />
+                  <Tab label="Footwear" />
+                  <Tab label="Groceries" />
+                  <Tab label="Wellness" />
+                  <Tab label="Jewelery" />
+                </Tabs>
+            </div>
+          </div>
+
+          <ProductsSlider items={4}/>
+        </div>
+      </section>
+
+      <section className="py-8 bg-white">
+        <div className="container overflow-hidden">
+          <div className="freeShipping w-[80%] mx-auto p-4 border-2 border-[#a83e3e] rounded-sm flex items-center justify-between">
+            <div className='col1 flex items-center gap-4'>
+              <LiaShippingFastSolid className='transform rotate-y-180 text-5xl'/>
+              <span className='text-2xl font-semibold uppercase'>Free Shipping</span>
+            </div>
+
+            <div className='col2'>
+              <p className='mb-0 font-[500]'>Free Delivery Now On Your First Order and Over $200</p>
+            </div>
+
+            <div className="col3">
+              <p className='font-bold text-2xl'>- Only 200$</p>
+            </div>
+          </div>
+
+          <AdsBannerSlider items={4}/>
+        </div>
+          
+      </section>
+
+      <section className="pb-5 bg-white">
+        <div className="container overflow-hidden">
+          <h2 className='text-[22px] font-[600]'>Latest Products</h2>
+          <ProductsSlider items={6}/>
+          <AdsBannerSlider items={4}/>
+        </div>
+      </section>
+      
+      
+      <section className="pb-5 bg-white">
+        <div className="container overflow-hidden">
+          <h2 className='text-[22px] font-[600]'>Featured Products</h2>
+          <ProductsSlider items={6}/>
+          <AdsBannerSlider items={3}/>
+        </div>
+      </section>
+
+      <section className="blogSection pb-5 bg-white">
+        <div className="py-5">
+          <Swiper
+            pagination={{
+              type: 'progressbar',
+            }}
+            spaceBetween={10}
+            slidesPerView={3}
+            navigation={true}
+            modules={[Navigation]}
+            className="blogSlider"
+          >
+            <SwiperSlide className='rounded-sm'>
+              <Link to="/" className='w-full'>
+                <div className="item py-5 px-5 bg-white w-full rounded-sm text-center flex flex-col items-center justify-center">
+                  <img src="./images/i1.png" className='!w-[60px] !h-auto  transition-all transition-all' alt="" />
+                  <h3 className='text-[16px] font-medium mt-3'>Smart Tablet</h3>
+                </div>
+              </Link>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
+
+
       <br /><br /><br /><br />
     </div>
   )
