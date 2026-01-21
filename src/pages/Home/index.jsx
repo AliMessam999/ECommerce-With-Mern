@@ -4,6 +4,9 @@ import HomeCatSlider from '../../components/HomeCatSlider'
 import { LiaShippingFastSolid } from "react-icons/lia";
 import AdsBannerSlider from '../../components/AdsBannerSlider'
 import ProductsSlider from '../../components/ProductsSlider'
+import BlogItem from '../../components/BlogItem'
+import { Link } from 'react-router-dom';
+
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -96,24 +99,57 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="blogSection pb-5 bg-white">
-        <div className="py-5">
+      <section className="blogSection pb-8 bg-white">
+        <div className="container overflow-hidden">
+          <h2 className='text-[22px] font-[600]'>From The Blog</h2>
           <Swiper
             pagination={{
               type: 'progressbar',
             }}
-            spaceBetween={10}
-            slidesPerView={3}
+            spaceBetween={30}
+            slidesPerView={4}
             navigation={true}
             modules={[Navigation]}
             className="blogSlider"
           >
-            <SwiperSlide className='rounded-sm'>
+            <SwiperSlide className='rounded-md'>
               <Link to="/" className='w-full'>
-                <div className="item py-5 px-5 bg-white w-full rounded-sm text-center flex flex-col items-center justify-center">
-                  <img src="./images/i1.png" className='!w-[60px] !h-auto  transition-all transition-all' alt="" />
-                  <h3 className='text-[16px] font-medium mt-3'>Smart Tablet</h3>
-                </div>
+                <BlogItem/> 
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide className='rounded-md'>
+              <Link to="/" className='w-full'>
+                <BlogItem/> 
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide className='rounded-md'>
+              <Link to="/" className='w-full'>
+                <BlogItem/> 
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide className='rounded-md'>
+              <Link to="/" className='w-full'>
+                <BlogItem/> 
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide className='rounded-md'>
+              <Link to="/" className='w-full'>
+                <BlogItem/> 
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide className='rounded-md'>
+              <Link to="/" className='w-full'>
+                <BlogItem/> 
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide className='rounded-md'>
+              <Link to="/" className='w-full'>
+                <BlogItem/> 
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide className='rounded-md'>
+              <Link to="/" className='w-full'>
+                <BlogItem/> 
               </Link>
             </SwiperSlide>
           </Swiper>
