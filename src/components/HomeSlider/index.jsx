@@ -21,6 +21,7 @@ const HomeSlider = () => {
                         pagination={{
                             type: 'progressbar',
                         }}
+                        loop={true}
                         spaceBetween={20}
                         slidesPerView={1}
                         navigation={true}
