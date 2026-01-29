@@ -17,6 +17,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Footer from '../../components/Footer';
+import HomeSlider2 from '../../components/HomeSliderV2';
+import BannerBoxV2 from '../../components/BannerBoxV2';
+import AdsBannerSliderV2 from '../../components/AdsBannerSliderV2';
 
 
 const Home = () => {
@@ -28,7 +31,22 @@ const Home = () => {
 
   return (
     <div>
-      <HomeSlider />
+      {/* <HomeSlider /> */}
+      {/* <HomeSlider2 /> */}
+      <section>
+        <div className="py-6">
+        {/* <div className="container flex items-center"> */}
+        <div className="container flex gap-5">
+          <div className="part1 w-[70%]">
+            <HomeSlider2 />
+          </div>
+          <div className="part2 w-[30%] flex flex-col items-center justify-between gap-5">
+            <BannerBoxV2 info="left" src="./images/BannerBoxV2/1.png" />
+            <BannerBoxV2 info="right" src="./images/BannerBoxV2/2.png"/>
+          </div>
+        </div>
+        </div>
+      </section>
       <HomeCatSlider />
 
       <section className='bg-white py-8'>
@@ -77,8 +95,9 @@ const Home = () => {
               <p className='font-bold text-2xl'>- Only 200$</p>
             </div>
           </div>
-
-          <AdsBannerSlider items={4}/>
+        </div>
+        <div className="container overflow-hidden my-4">
+          <AdsBannerSliderV2 items={4}/>
         </div>
           
       </section>

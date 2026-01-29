@@ -1,0 +1,16 @@
+.swiper-pagination-bullet-active{
+  @apply !bg-[#FF5252];
+}
+.swiper-button-next:hover{
+  @apply !bg-[#FF5252] !text-[white];
+}
+.swiper-button-prev:hover{
+  @apply !bg-[#FF5252] !text-[white];
+}
+/* .swiper-slide-active .info{
+  @apply !opacity-1 !block;
+} */
+
+.swiper{
+  margin: 0 !important;
+}
